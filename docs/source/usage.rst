@@ -79,45 +79,111 @@ Download the GPG key
    wget -qO- https://repos.influxdata.com/influxdb.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/influxdb.gpg > /dev/null
 
 Setup the repository
+
 .. code-block:: console
 
    export DISTRIB_ID=$(lsb_release -si); export DISTRIB_CODENAME=$(lsb_release -sc)
 echo "deb [signed-by=/etc/apt/trusted.gpg.d/influxdb.gpg] https://repos.influxdata.com/${DISTRIB_ID,,} ${DISTRIB_CODENAME} stable" | sudo tee /etc/apt/sources.list.d/influxdb.list > /dev/null
 
 Update your server
+
 .. code-block:: console
 
    apt-get update
 
 Install InfluxDB2
+
 .. code-block:: console
 
    apt-get install influxdb2
 
 Start InfluxDB Service 
+
 .. code-block:: console
    systemctl start influxdb
    systemctl status influxdb
 
 1.4) Grafana Installation
+
 Install the dependencies
-apt-get install wget curl gnupg2 apt-transport-https software-properties-common -y
+
+.. code-block:: console
+
+   apt-get install wget curl gnupg2 apt-transport-https software-properties-common -y
+
 Add the Grafana GPG key
-wget -q -O - https://packages.grafana.com/gpg.key | apt-key add -
+
+.. code-block:: console
+   wget -q -O - https://packages.grafana.com/gpg.key | apt-key add -
+
 Add the Grafana repository
-echo "deb https://packages.grafana.com/oss/deb stable main" | tee -a /etc/apt/sources.list.d/grafana.list
+
+.. code-block:: console
+   echo "deb https://packages.grafana.com/oss/deb stable main" | tee -a /etc/apt/sources.list.d/grafana.list
+
 Update your server
-apt-get update
+
+.. code-block:: console
+
+   apt-get update
+
 Install Grafana
-apt-get install grafana -y
+
+.. code-block:: console
+
+   apt-get install grafana -y
+
 Start Grafana service:
-systemctl start grafana-server
-systemctl status grafana-server
+
+.. code-block:: console
+
+   systemctl start grafana-server
+   systemctl status grafana-server
 
 Connect to localhost:3000/ and enter your credentials. Under the configurations drop-down, select plugins and install the following plugins:
 JSON
 Node Graph API
 Plotly Panel
+
+1.5) Install additional requirements
+
+.. code-block:: console
+
+   pip install cryptography==2.8
+   pip install Flask==2.2.2
+   pip install Flask_Cors==3.0.10
+   pip install grafanalib==0.6.3
+   pip install influxdb==5.3.1
+   pip install matplotlib==3.4.1
+   pip install numpy==1.17.4
+   pip install pandas==1.5.1
+   pip install paramiko==2.6.0
+   pip install plotly==5.11.0
+   pip install pymongo==4.1.1
+   pip install requests==2.22.0
+   pip install scp==0.14.4
+
+1.6) Run the server
+
+Clone the repository
+
+.. code-block:: console
+   
+   git clone https://github.com/sparcityeu/Digital-SuperTwin.git
+
+If you have Dolap account,you can activate it:
+
+.. code-block:: console
+   
+   ssh <your username>@10.36.54.195
+
+Inside of the SuperTwin directory:
+
+.. code-block:: console
+   
+   sudo python3 supertwin.py
+
+When it is asked, enter the address as 10.36.54.195 and your credentials.
 
 
 Creating recipes
