@@ -9,7 +9,6 @@ Installation
 You can find the necessary technologies, packages, libraries and how to install them based on your operating system below:
 
 1) UBUNTU 20.04
----------------
 
 1.1) MongoDB Installation
 
