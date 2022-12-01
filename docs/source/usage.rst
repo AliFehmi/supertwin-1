@@ -67,21 +67,37 @@ Open the application and click on the connect button.
 1.3) InfluxDB Installation
 
 Switch to the root user
-sudo -i
+
+.. code-block:: console
+
+   sudo -i
 
 Download the GPG key
-wget -qO- https://repos.influxdata.com/influxdb.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/influxdb.gpg > /dev/null
+
+.. code-block:: console
+
+   wget -qO- https://repos.influxdata.com/influxdb.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/influxdb.gpg > /dev/null
 
 Setup the repository
-export DISTRIB_ID=$(lsb_release -si); export DISTRIB_CODENAME=$(lsb_release -sc)
+.. code-block:: console
+
+   export DISTRIB_ID=$(lsb_release -si); export DISTRIB_CODENAME=$(lsb_release -sc)
 echo "deb [signed-by=/etc/apt/trusted.gpg.d/influxdb.gpg] https://repos.influxdata.com/${DISTRIB_ID,,} ${DISTRIB_CODENAME} stable" | sudo tee /etc/apt/sources.list.d/influxdb.list > /dev/null
+
 Update your server
-apt-get update
+.. code-block:: console
+
+   apt-get update
+
 Install InfluxDB2
-apt-get install influxdb2
+.. code-block:: console
+
+   apt-get install influxdb2
+
 Start InfluxDB Service 
-systemctl start influxdb
-systemctl status influxdb
+.. code-block:: console
+   systemctl start influxdb
+   systemctl status influxdb
 
 1.4) Grafana Installation
 Install the dependencies
