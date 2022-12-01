@@ -20,23 +20,28 @@ Import the public GPG key
    
 create a file in the sources.list.d directory named mongodb-org-4.4.list
 .. code-block:: console
+
    echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 	multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list
 
 update your server’s local package index
 .. code-block:: console
-	sudo apt update
+
+   sudo apt update
 
 install MongoDB
 .. code-block:: console
-	sudo apt install mongodb-org
+
+   sudo apt install mongodb-org
 
 start the MongoDB service:
 .. code-block:: console
-	sudo systemctl start mongod.service
+
+   sudo systemctl start mongod.service
 
 check the service’s status
 .. code-block:: console
-	sudo systemctl status mongod
+
+   sudo systemctl status mongod
 
 
 Creating recipes
