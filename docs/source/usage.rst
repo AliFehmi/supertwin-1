@@ -44,7 +44,59 @@ start the MongoDB service:
 
 check the service’s status
 
->>> sudo systemctl status mongod
+.. code-block:: console
+
+   sudo systemctl status mongod
+   
+1.2) MongoDB Compass Installation
+
+Download the MongoDB compass .deb file 
+
+.. code-block:: console
+   wget https://downloads.mongodb.com/compass/mongodb-compass_1.28.1_amd64.deb
+Install the .deb file
+.. code-block:: console
+   sudo apt install ./mongodb-compass_1.28.1_amd64.deb
+Open the application and click on the connect button.
+
+1.3) InfluxDB Installation
+
+Switch to the root user
+sudo -i
+
+Download the GPG key
+wget -qO- https://repos.influxdata.com/influxdb.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/influxdb.gpg > /dev/null
+
+Setup the repository
+export DISTRIB_ID=$(lsb_release -si); export DISTRIB_CODENAME=$(lsb_release -sc)
+echo "deb [signed-by=/etc/apt/trusted.gpg.d/influxdb.gpg] https://repos.influxdata.com/${DISTRIB_ID,,} ${DISTRIB_CODENAME} stable" | sudo tee /etc/apt/sources.list.d/influxdb.list > /dev/null
+Update your server
+apt-get update
+Install InfluxDB2
+apt-get install influxdb2
+Start InfluxDB Service 
+systemctl start influxdb
+systemctl status influxdb
+
+1.4) Grafana Installation
+Install the dependencies
+apt-get install wget curl gnupg2 apt-transport-https software-properties-common -y
+Add the Grafana GPG key
+wget -q -O - https://packages.grafana.com/gpg.key | apt-key add -
+Add the Grafana repository
+echo "deb https://packages.grafana.com/oss/deb stable main" | tee -a /etc/apt/sources.list.d/grafana.list
+Update your server
+apt-get update
+Install Grafana
+apt-get install grafana -y
+Start Grafana service:
+systemctl start grafana-server
+systemctl status grafana-server
+
+Connect to localhost:3000/ and enter your credentials. Under the configurations drop-down, select plugins and install the following plugins:
+JSON
+Node Graph API
+Plotly Panel
 
 
 Creating recipes
