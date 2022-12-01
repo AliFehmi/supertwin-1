@@ -53,10 +53,15 @@ check the service’s status
 Download the MongoDB compass .deb file 
 
 .. code-block:: console
+
    wget https://downloads.mongodb.com/compass/mongodb-compass_1.28.1_amd64.deb
+   
 Install the .deb file
+
 .. code-block:: console
+
    sudo apt install ./mongodb-compass_1.28.1_amd64.deb
+   
 Open the application and click on the connect button.
 
 1.3) InfluxDB Installation
