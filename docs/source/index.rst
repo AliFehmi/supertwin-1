@@ -1,11 +1,13 @@
 Welcome to Lumache's documentation!
 ===================================
+Digital SuperTwin
+SuperTwin creates a structured data representation over an HPC system, manages data input from a collection of tools and enable reasonings among them. Current capabilities of SuperTwin are:
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-lolooooooooooooooooooooooooooooooo
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
+- Monitoring
+- Automated PMU configuration
+- Automated profiling
+- Modelling
+- Knowledge retrieval
 
 Check out the :doc:`usage` section for further information, including
 how to :ref:`installation` the project.
