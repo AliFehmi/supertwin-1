@@ -1,4 +1,4 @@
-Welcome to Lumache's documentation!
+Welcome to Super Twin's documentation!
 ===================================
 Digital SuperTwin
 SuperTwin creates a structured data representation over an HPC system, manages data input from a collection of tools and enable reasonings among them. Current capabilities of SuperTwin are:
