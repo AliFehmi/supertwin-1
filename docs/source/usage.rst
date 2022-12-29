@@ -8,6 +8,20 @@ Installation
 
 You can find the necessary technologies, packages, libraries and how to install them based on your operating system below:
 
+On local host
+
+You need
+
+- InfluxDB 1.8
+- MongoDB
+- Grafana 9+
+- Plugins
+- JSON
+- Node Graph API
+- Plotly panel
+- pcp-export-pcp2influxdb
+- Python 3.7+
+
 1) Ubuntu 20.04
 ---------------
 
