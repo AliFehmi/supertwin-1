@@ -1,16 +1,16 @@
-Contributing
-===========
+Contributing to the Project
+===========================
 
 .. autosummary::
    :toctree: generated
 
    lumache
 
-# Making Contributions to the Repo
+**Making Contributions to the Repo**
 
 This page will explain the exact flow of making a contribution. That includes creating an issue, making a pull request, reviewing it, and merging it. 
 
-## Creatin an Issue
+**Creating an Issue**
 
 Contributions preferably start with an issue on the issue tracker of GitHub. An issue can represent bugs, features, fixes, discussions, or any other addition to the codebase or the documentation.
 
@@ -43,7 +43,7 @@ Note 1: priority labels should only be added to urgent issues; not all issues sh
 
 Note 2: it is preferable that an issue have a type and a state, but that is not necessarily the case.
 
-## Contributing to the code 
+**Contributing to the code** 
 
 If you wish to contribute to the code base, you can do so through pull requests.
 
@@ -54,30 +54,33 @@ More precisely, a typical contribution will follow this pattern:
 1. Create an issue on GitHub discussing your contribution. At this point, a discussion may happen where the entire team can get on the same page.
 2. Pull `origin/develop` into your local to start developing from the latest state of the project, and create a new branch for your contribution. The naming convention for a contribution branch is `feature/<new_feature>`:
     
-    ```bash
+.. code-block:: console
+
     # on your local
     cd sparsebase
     git checkout develop
     git pull origin develop
     git checkout -b feature/<new_feature>
-    ```
+   
     
 3. After you're done working on your feature, make sure that it can be merged cleanly with `origin/develop` by pulling `origin/develop` back into your local machine and merging it with your feature branch:
     
-    ```bash
+.. code-block:: console
+
     git checkout develop
     git pull origin develop
     git checkout feature/<new_feature>
     git merge develop
     # merge conflicts may arise
-    ```
+    
     
 4. Once your feature branch merges successfully with `develop`, push your branch to `origin`:
     
-    ```bash
+.. code-block:: console
+
     git checkout feature/<new_feature>
     git push origin feature/<new_feature>
-    ```
+   
     
 5. On GitHub, create a pull request to merge your branch with `develop`; the base of the request will be `develop` and the merging branch will be `feature/<new_feature>`. You can use the same labels used for issues with pull requests. You can also link an issue to your pull request.
 6.  Once the contribution is reviewed, a maintainer from the team will merge the pull request into `origin/develop`.
