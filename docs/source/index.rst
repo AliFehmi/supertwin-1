@@ -29,3 +29,5 @@ Contents
    usage
    api
    license
+   how_to
+   contribution
