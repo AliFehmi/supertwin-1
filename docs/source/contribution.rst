@@ -54,31 +54,31 @@ More precisely, a typical contribution will follow this pattern:
 1. Create an issue on GitHub discussing your contribution. At this point, a discussion may happen where the entire team can get on the same page.
 2. Pull `origin/develop` into your local to start developing from the latest state of the project, and create a new branch for your contribution. The naming convention for a contribution branch is `feature/<new_feature>`:
     
-``` shell
+.. code-block:: python
 
    # on your local
    cd sparsebase
    git checkout develop
    git pull origin develop
    git checkout -b feature/<new_feature>
-```
+   
     
 3. After you're done working on your feature, make sure that it can be merged cleanly with `origin/develop` by pulling `origin/develop` back into your local machine and merging it with your feature branch:
     
-.. code-block:: console
+.. code-block:: python
 
    git checkout develop
    git pull origin develop
    git checkout feature/<new_feature>
    git merge develop
    # merge conflicts may arise
-..
+
     
     
 4. Once your feature branch merges successfully with `develop`, push your branch to `origin`:
     
-.. code-block:: console
-
+.. code-block:: python
+   
    git checkout feature/<new_feature>
    git push origin feature/<new_feature>
    
