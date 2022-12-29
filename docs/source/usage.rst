@@ -8,7 +8,7 @@ Installation
 
 You can find the necessary technologies, packages, libraries and how to install them based on your operating system below:
 
-1) UBUNTU 20.04
+1) Ubuntu 20.04
 ---------------
 
 1.1) MongoDB Installation
@@ -187,8 +187,8 @@ Inside of the SuperTwin directory:
 When it is asked, enter the address as 10.36.54.195 and your credentials.
 
 
-2) MANJARO 
+2) Manjaro
 ----------
 
-3) MAC
+3) Mac
 ------
