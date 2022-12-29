@@ -10,11 +10,12 @@ SuperTwin creates a structured data representation over an HPC system, manages d
 - Knowledge retrieval
 
 Overview
+
 SuperTwin creates a Digital Twin Description (DTD) of a target system. It could be used to model, monitor and/or observe both a remote system or local system. However, since large amounts of data are sampled and visualized during the process best use case is to model a remote system.
 Since SuperTwin leverages a large collection of tools; it has a large dependency list. Installation of these dependencies are left to the user.
 
 Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
+how to :ref:`installation` the project. :doc:`license`
 
 .. note::
 
