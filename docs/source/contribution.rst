@@ -19,23 +19,23 @@ When creating an issue, you can give it labels. Labels help communicate informat
 Labels in this project have three kinds, "type", "state" and "priority". The type of a label is going to be used as its prefix, e.g. "state: pending". The following are the labels used in this project.
 
 1. type: the reason (or contents) of the issue:
-    * bug.
-    * feature.
-    * docs: this includes documenting inside the code (Doxygen and comments), adding documentation pages, and adding examples.
-    * discussion: not the same as docs; these are discussions about the project, design decisions, directions of development, etc. It can be the case that the result of a discussion is some added documentation. If that happens, the type should change to docs.
-    * chore: mindless work (to an extent.) Changing file names, changing extensions, copying info from README to pages, etc.
-    * fix: Iterations on existing features or infrastructure. Optimizations, refactoring, improving API, etc.
-    * testing: tests related. 
+   * bug.
+   * feature.
+   * docs: this includes documenting inside the code (Doxygen and comments), adding documentation pages, and adding examples.
+   * discussion: not the same as docs; these are discussions about the project, design decisions, directions of development, etc. It can be the case that the result of a discussion is some added documentation. If that happens, the type should change to docs.
+   * chore: mindless work (to an extent.) Changing file names, changing extensions, copying info from README to pages, etc.
+   * fix: Iterations on existing features or infrastructure. Optimizations, refactoring, improving API, etc.
+   * testing: tests related. 
 2. priority: *if* the issue is urgent, how urgent it is:
-    * now: now
-    * soon: less than now
+   * now: now
+   * soon: less than now
 3. state: the progress of the issue. Note that the “closed” or “done” state is implicitly defined by closing an issue:
-    * pending: someone’s working on this issue.
-    * review needed: work is done, someone needs to review the work.
-    * revision needed: if a reviewer reviews the issue and thinks it’s an issue isn't done yet, they place it here.
-    * approved: ready to be merged (and closed)
-    * inactive: issue is abandoned for now, but might become active later.
-    * wontfix: abandoned indefinetely.
+   * pending: someone’s working on this issue.
+   * review needed: work is done, someone needs to review the work.
+   * revision needed: if a reviewer reviews the issue and thinks it’s an issue isn't done yet, they place it here.
+   * approved: ready to be merged (and closed)
+   * inactive: issue is abandoned for now, but might become active later.
+   * wontfix: abandoned indefinetely.
 
 There is also a single label without a kind: "good first issue." This label is for issues that serve as a good starting point for new contributers. 
 
@@ -56,30 +56,30 @@ More precisely, a typical contribution will follow this pattern:
     
 .. code-block:: console
 
-    # on your local
-    cd sparsebase
-    git checkout develop
-    git pull origin develop
-    git checkout -b feature/<new_feature>
+   # on your local
+   cd sparsebase
+   git checkout develop
+   git pull origin develop
+   git checkout -b feature/<new_feature>
    
     
 3. After you're done working on your feature, make sure that it can be merged cleanly with `origin/develop` by pulling `origin/develop` back into your local machine and merging it with your feature branch:
     
 .. code-block:: console
 
-    git checkout develop
-    git pull origin develop
-    git checkout feature/<new_feature>
-    git merge develop
-    # merge conflicts may arise
+   git checkout develop
+   git pull origin develop
+   git checkout feature/<new_feature>
+   git merge develop
+   # merge conflicts may arise
     
     
 4. Once your feature branch merges successfully with `develop`, push your branch to `origin`:
     
 .. code-block:: console
 
-    git checkout feature/<new_feature>
-    git push origin feature/<new_feature>
+   git checkout feature/<new_feature>
+   git push origin feature/<new_feature>
    
     
 5. On GitHub, create a pull request to merge your branch with `develop`; the base of the request will be `develop` and the merging branch will be `feature/<new_feature>`. You can use the same labels used for issues with pull requests. You can also link an issue to your pull request.
