@@ -1,6 +1,8 @@
 Frequently Asked Questions
 ==========================
 
+.. _q_and_a:
+
 .. autosummary::
    :toctree: generated
 

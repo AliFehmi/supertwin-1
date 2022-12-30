@@ -1,6 +1,8 @@
 Contributing to the Project
 ===========================
 
+.. _contribution:
+
 .. autosummary::
    :toctree: generated
 

@@ -1,6 +1,8 @@
 How To Guides
 =============
 
+.. _how_to:
+
 .. autosummary::
    :toctree: generated
 
