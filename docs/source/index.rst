@@ -38,7 +38,7 @@ The table below demonstrates the data field probed from the machines.
 The data collected is stored in databases based on the data property. The time series data is stored in InfluxDB while metadata is stored in MongoDB.
 
 .. image:: ../images/supertwin_database.png
-   :width: 300
+   :width: 450
 
 .. note::
 
