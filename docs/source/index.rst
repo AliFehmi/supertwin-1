@@ -1,5 +1,5 @@
 Welcome to Super Twin's documentation!
-===================================
+======================================
 Digital SuperTwin
 SuperTwin creates a structured data representation over an HPC system, manages data input from a collection of tools and enable reasonings among them. Current capabilities of SuperTwin are:
 
@@ -16,6 +16,9 @@ Since SuperTwin leverages a large collection of tools; it has a large dependency
 
 Check out the :doc:`usage` section for further information, including
 how to :ref:`installation` the project. :doc:`license`
+
+.. image:: images/supertwin_diagram.png
+   :width: 600
 
 .. note::
 
