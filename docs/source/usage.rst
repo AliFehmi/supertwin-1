@@ -26,13 +26,9 @@ You need
 
    It is important that you need to install the correct versions.
 
-# Ubuntu 20.04
+1) Ubuntu 20.04
++++++++++++++++
 
-ll
-
-## subtitle
-
-ll
 
 1.1) MongoDB Installation
 
@@ -211,7 +207,7 @@ When it is asked, enter the address as 10.36.54.195 and your credentials.
 
 
 2) Manjaro
-----------
+++++++++++
 
 3) Mac
-------
+++++++
