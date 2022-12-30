@@ -14,6 +14,8 @@ different countries collaborate with 2.6 M € funding by the European High Perf
 The main project aims to design tools and algorithms for enabling both performance and energy efficiency of sparse computations with 
 the application focus on computational science, deep learning and data analytics. 
 
+You can find the collaborators below:
+
 .. image:: ../images/sparcity.png
    :width: 450
 
@@ -28,7 +30,7 @@ SuperTwin creates a Digital Twin Description (DTD) of a target system. It could 
 Since SuperTwin leverages a large collection of tools; it has a large dependency list. Installation of these dependencies are left to the user.
 
 Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project. :doc:`license`
+how to :ref:`installation` the project and other useful tutorials at :ref:`how_to` section.
 
 SuperTwin is
  * generic
@@ -53,10 +55,6 @@ The data collected is stored in databases based on the data property. The time s
 .. image:: ../images/supertwin_database.png
    :width: 450
 
-.. note::
-
-   This project is under active development.
-
 Contents
 --------
 
@@ -68,3 +66,7 @@ Contents
    how_to
    contribution
    q_and_a
+
+.. note::
+
+   This project is under active development.
