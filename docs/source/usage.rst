@@ -22,6 +22,10 @@ You need
 - pcp-export-pcp2influxdb
 - Python 3.7+
 
+.. warning::
+
+   It is important that you need to install the correct versions.
+
 1) Ubuntu 20.04
 ---------------
 
