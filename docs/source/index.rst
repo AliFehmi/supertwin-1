@@ -30,7 +30,7 @@ SuperTwin creates a Digital Twin Description (DTD) of a target system. It could 
 Since SuperTwin leverages a large collection of tools; it has a large dependency list. Installation of these dependencies are left to the user.
 
 Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project and other useful tutorials at :ref:`how_to` section.
+how to :ref:`installation` the project and other useful tutorials at :doc:`how_to` section.
 
 SuperTwin is
  * generic
