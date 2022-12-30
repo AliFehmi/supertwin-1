@@ -26,7 +26,13 @@ SuperTwin is
 
 
 The modules of SuperTwin are shown below. Nodes with dashed lines and pale colors are continue to be developed.
+
 .. image:: ../images/supertwin_diagram.png
+   :width: 600
+
+The table below demonstrates the data field probed from the machines. 
+
+.. image:: ../images/supertwin_probing.png
    :width: 600
 
 .. note::
