@@ -17,7 +17,16 @@ Since SuperTwin leverages a large collection of tools; it has a large dependency
 Check out the :doc:`usage` section for further information, including
 how to :ref:`installation` the project. :doc:`license`
 
-.. image:: images/supertwin_diagram.png
+SuperTwin is
+- generic
+- unified
+- recursive
+- dynamic & configurable
+- modular
+
+
+
+.. image:: ../images/supertwin_diagram.png
    :width: 600
 
 .. note::
