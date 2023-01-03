@@ -232,16 +232,19 @@ Install homebrew by using the following command
 3.3) MongoDB
 
 tap mongodb homebrew tap
+
 .. code-block:: console
 
    brew tap mongodb/brew
 
 updating homebrew
+
 .. code-block:: console
    
    brew update
 
 installing mongodb
+
 .. code-block:: console
    
    brew install mongodb-community@6.0
