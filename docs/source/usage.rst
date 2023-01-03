@@ -211,3 +211,64 @@ When it is asked, enter the address as 10.36.54.195 and your credentials.
 
 3) Mac
 ++++++
+3.1) XCode Developer Tools
+
+Install XCode developer tools using the command below
+
+.. code-block:: console
+
+   xcode-select --install
+
+
+3.2) Homebrew
+
+Install homebrew by using the following command
+
+.. code-block:: console
+
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+
+3.3) MongoDB
+
+tap mongodb homebrew tap
+.. code-block:: console
+
+    brew tap mongodb/brew
+
+updating homebrew
+.. code-block:: console
+    brew update
+
+installing mongodb
+.. code-block:: console
+    brew install mongodb-community@6.0
+
+
+
+3.4) InfluxDB
+
+Install influxdb using homebrew
+
+.. code-block:: console
+
+   brew install influxdb
+
+
+3.5) Grafana
+
+Install Grafana using homebrew
+
+.. code-block:: console
+
+   brew install grafana
+
+
+3.6) MongoDB Compass 
+
+Install MongoDB Compass using the link: https://www.mongodb.com/docs/compass/current/install/
+
+
+
+
+   
