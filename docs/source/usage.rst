@@ -165,7 +165,10 @@ JSON
 Node Graph API
 Plotly Panel
 
-1.5) Install additional requirements
+1.5) Install pcp-export-pcp2influxdb
+You can download it from https://packages.debian.org/sid/utils/pcp-export-pcp2influxdb based on the architecture of your computer.
+
+1.6) Install additional requirements
 
 .. code-block:: console
 
@@ -183,7 +186,7 @@ Plotly Panel
    pip install requests==2.22.0
    pip install scp==0.14.4
 
-1.6) Run the server
+1.7) Run the server
 
 Clone the repository
 
@@ -191,7 +194,7 @@ Clone the repository
    
    git clone https://github.com/sparcityeu/Digital-SuperTwin.git
 
-If you have Dolap account,you can activate it:
+If you have Dolap account, you can activate it:
 
 .. code-block:: console
    
@@ -204,6 +207,11 @@ Inside of the SuperTwin directory:
    sudo python3 supertwin.py
 
 When it is asked, enter the address as 10.36.54.195 and your credentials.
+
+.. warning::
+
+   Before you run the server, make sure that you start MongoDB, InfluxDB and Grafana.
+
 
 
 2) Manjaro

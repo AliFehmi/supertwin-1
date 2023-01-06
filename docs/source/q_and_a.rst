@@ -9,9 +9,10 @@ Frequently Asked Questions
    lumache
 
 **Question 1: What is SuperTwin?**
-
+SuperTwin is a digital twin for high-performance computing clusters which creates a structured data representation over an HPC system, manages data input from a collection of tools and enable reasonings among them.
 
 **Question 2: Where can I use SuperTwin?**
+
 
 **Question 3: How can I use SuperTwin?**
 
