@@ -26,6 +26,12 @@ You need
 
    It is important that you install the correct versions.
 
+.. note::
+
+   In the SuperTwin repository, you can find a directory called setup which automizes the setup process by detecting your operating system. 
+   You can run it to install required dependencies and libraries all at once.
+   
+
 1) Ubuntu 20.04
 +++++++++++++++
 
