@@ -163,11 +163,13 @@ Install the dependencies
 Add the Grafana GPG key
 
 .. code-block:: console
+
    wget -q -O - https://packages.grafana.com/gpg.key | apt-key add -
 
 Add the Grafana repository
 
 .. code-block:: console
+   
    echo "deb https://packages.grafana.com/oss/deb stable main" | tee -a /etc/apt/sources.list.d/grafana.list
 
 Update your server
