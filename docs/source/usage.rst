@@ -15,10 +15,10 @@ You need
 - InfluxDB 1.8
 - MongoDB
 - Grafana 9+
-- Plugins
-- JSON
-- Node Graph API
-- Plotly panel
+   - Plugins
+      - JSON
+      - Node Graph API
+      - Plotly panel
 - pcp-export-pcp2influxdb
 - Python 3.7+
 
@@ -42,33 +42,56 @@ Import the public GPG key
 
 .. code-block:: console
 
-   curl -fsSL https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
+   wget -qO - https://www.mongodb.org/static/pgp/server-6.0.asc | sudo apt-key add -
+
+The operation should respond with an OK.
+
+.. note::
+
+   If you receive an error indicating that gnupg is not installed:
+
+   .. code-block:: console
+
+      sudo apt-get install gnupg
+
+   Then retry the first command.
+
    
-create a file in the sources.list.d directory named mongodb-org-4.4.list
+Create a file in the sources.list.d directory named mongodb-org-4.4.list
 
 .. code-block:: console
 
-   echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 	multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list
+   echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/6.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list
 
-update your server’s local package index
-
-.. code-block:: console
-
-   sudo apt update
-
-install MongoDB
+Reload the local package database:
 
 .. code-block:: console
 
-   sudo apt install mongodb-org
+   sudo apt-get update
 
-start the MongoDB service:
+Install MongoDB
 
 .. code-block:: console
 
-   sudo systemctl start mongod.service
+   sudo apt-get install -y mongodb-org
 
-check the service’s status
+Start the MongoDB service:
+
+.. code-block:: console
+
+   sudo systemctl start mongod
+
+.. note:: 
+
+   If you receive an error similar to this: Failed to start mongod.service: Unit mongod.service not found.
+
+   .. code-block:: console 
+
+      sudo systemctl daemon-reload
+
+   Then, run the above command again.
+
+Check the service’s status
 
 .. code-block:: console
 
@@ -92,42 +115,42 @@ Open the application and click on the connect button.
 
 1.3) InfluxDB Installation
 
-Switch to the root user
+Add the InfluxData repository
 
 .. code-block:: console
 
-   sudo -i
-
-Download the GPG key
-
-.. code-block:: console
-
-   wget -qO- https://repos.influxdata.com/influxdb.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/influxdb.gpg > /dev/null
-
+   wget -q https://repos.influxdata.com/influxdb.key
+   
 Setup the repository
 
 .. code-block:: console
 
-   export DISTRIB_ID=$(lsb_release -si); export DISTRIB_CODENAME=$(lsb_release -sc)
-echo "deb [signed-by=/etc/apt/trusted.gpg.d/influxdb.gpg] https://repos.influxdata.com/${DISTRIB_ID,,} ${DISTRIB_CODENAME} stable" | sudo tee /etc/apt/sources.list.d/influxdb.list > /dev/null
-
-Update your server
-
-.. code-block:: console
-
-   apt-get update
-
-Install InfluxDB2
+   echo '23a1c8836f0afc5ed24e0486339d7cc8f6790b83886c4c96995b88a061c5bb5d influxdb.key' | sha256sum -c && cat influxdb.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/influxdb.gpg > /dev/null
+   echo 'deb [signed-by=/etc/apt/trusted.gpg.d/influxdb.gpg] https://repos.influxdata.com/debian stable main' | sudo tee /etc/apt/sources.list.d/influxdata.list
+   
+Update your server and install InfluxDB 1.8
 
 .. code-block:: console
 
-   apt-get install influxdb2
+   sudo apt-get update && sudo apt-get install influxdb
+
+Unmask the service (Required for Ubuntu 15.04+)
+
+.. code-block:: console
+
+   sudo systemctl unmask influxdb.service
 
 Start InfluxDB Service 
 
 .. code-block:: console
-   systemctl start influxdb
-   systemctl status influxdb
+
+   sudo systemctl start influxdb
+
+Check the status to see if it runs correctly
+
+.. code-block:: console
+
+   sudo systemctl start influxdb
 
 1.4) Grafana Installation
 

@@ -41,7 +41,12 @@ Labels in this project have three kinds, "type", "state" and "priority". The typ
 
 There is also a single label without a kind: "good first issue." This label is for issues that serve as a good starting point for new contributers. 
 
+.. note::
+
 Note 1: priority labels should only be added to urgent issues; not all issues should have a priority label.
+
+
+.. note::
 
 Note 2: it is preferable that an issue have a type and a state, but that is not necessarily the case.
 
